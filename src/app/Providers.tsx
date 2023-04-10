@@ -2,7 +2,7 @@
 import { ThemeProvider } from "next-themes";
 import React from "react";
 
-const Providers: React.FunctionComponent<any> = ({ children }) => {
+const Providers: React.FC<any> = ({ children }) => {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <div className="dark:bg-gray-700 dark:text-gray-200 text-gray-700 transition-colors duration-300 min-h-screen select-none">
