@@ -3,7 +3,11 @@ import { ApiResponse } from "@/interfaces/tmdb";
 
 const API_KEY = process.env.API_KEY;
 
-export default async function Home({ searchParams }: any) {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
   const genre = searchParams.genre || "fetchTrending";
   const res = await fetch(
     `https://api.themoviedb.org/3/${
